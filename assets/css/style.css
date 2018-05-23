@@ -8,10 +8,40 @@ body {
    
 }
 
-h1 {
+h2, h6, h3, .scoreBoard {
     font-family: 'Press Start 2P', cursive;
     color: white;
     text-align: center;
-    margin-top: 25px;
+    margin-top: 15px;
+    border: dotted white 3px;
+    padding: 15px;
+    background-color: rgba(88, 119, 78, 0.45);
+   }
+
+   h2:hover, h6:hover, h3:hover, .scoreBoard:hover {
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    border: dotted white 3px;
+    padding: 15px;
+    background-color: rgba(88, 119, 78, 0.75);
+   }
+
+   Button {
+    font-family: 'Press Start 2P', cursive;
+   
+   }
+
+   Button:hover {
+    font-family: 'Press Start 2P', cursive;
+   
+
+   }
+
+.modal-title, .modal-body {
+    font-family: 'Press Start 2P', cursive;
+    
+
 
 }
