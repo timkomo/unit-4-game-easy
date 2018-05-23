@@ -1,0 +1,17 @@
+body {
+     background-image: url("../images/08d9ef7723de602edefa8af825d9a1e2.gif");
+     background-position: center center;
+     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: auto;
+   
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    text-align: center;
+    margin-top: 25px;
+
+}
