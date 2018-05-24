@@ -23,7 +23,7 @@ h2, h6, h3, .scoreBoard {
     color: white;
     text-align: center;
     margin-top: 15px;
-    border: dotted white 3px;
+    border: dotted yellow 3px;
     padding: 15px;
     background-color: rgba(88, 119, 78, 0.75);
    }
@@ -45,3 +45,29 @@ h2, h6, h3, .scoreBoard {
 
 
 }
+
+p {
+    font-size: 14px;
+    
+
+}
+
+.img-thumbnail {
+    background-color: rgba(43, 58, 39, 0.75);
+    border: dotted white 3px;
+   
+
+}
+
+.img-thumbnail:hover {
+    
+    border: dotted yellow 3px;
+    background-color: rgba(88, 119, 78, 0.75);
+    
+
+}
+
+.images {
+   text-align: center;
+}
+
