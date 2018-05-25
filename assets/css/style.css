@@ -5,10 +5,11 @@ body {
     background-attachment: fixed;
     background-size: cover;
     margin: auto;
+    
    
 }
 
-h2, h6, h3, .scoreBoard {
+ h2, h6, h3, .scoreBoard {
     font-family: 'Press Start 2P', cursive;
     color: white;
     text-align: center;
@@ -30,14 +31,15 @@ h2, h6, h3, .scoreBoard {
 
    Button {
     font-family: 'Press Start 2P', cursive;
+    margin-top: 25px;
+    margin-bottom: 15px;
    
    }
 
-   Button:hover {
-    font-family: 'Press Start 2P', cursive;
+   
    
 
-   }
+   
 
 .modal-title, .modal-body {
     font-family: 'Press Start 2P', cursive;
@@ -69,5 +71,23 @@ p {
 
 .images {
    text-align: center;
+}
+
+.youWinDiv, .youLoseDiv {
+    z-index: 500;
+    background-color: rgba(88, 119, 78, 0.95);
+    position: fixed;
+    top: 40%;
+    left: 33%;
+    width: 35%;
+    height: 20%;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    border: dotted white 3px;
+    padding: 15px;
+    display: none;
+
 }
 

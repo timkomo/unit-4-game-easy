@@ -10,17 +10,21 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-
-
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png">
+   
 
     <title>Cavern Crystal Collector</title>
   </head>
   <body>
         <div class="container">
-            <div class="row">
+          <h1 class="youWinDiv" > YOU WIN!!!<button type="button" class="btn btn-warning howToPlayBtn" id="playAgain-Btn"> Play Again!</button></h1>
+          <h1 class="youLoseDiv" > YOU LOSE!!<button type="button" class="btn btn-warning howToPlayBtn" id="playAgain-Btn2"> Play Again!</button></h1>
+        <div class="row">
                 <div class="col-md-12"> </div>
     
     <h3><i class="far fa-gem"></i> ✵✵✵✵✵ Cavern Crystal Collector ✵✵✵✵✵ <i class="far fa-gem"></i></h3>
+
+    
 
                 </div>
             </div>
@@ -33,14 +37,15 @@
             <div class="col-md-6">
                    <h6> SCORE TO MATCH:</h6>
                     <div class="scoreBoard">
-                            <h1 class="display-4">39</h1>
+                            <h1 class="display-4" id="scoreToMatch"></h1>
                     </div>                         
                  </div>
             <div class="col-md-6">
                 <h6> STATS:</h6>
                 <div class="scoreBoard">
-                    <p>WINS:</p>
-                    <p>LOSSES:</p>
+                    <p id="wins">WINS:</p>
+                    <p id="losses">LOSSES:</p>
+                  
                     
             </div>   
           </div>
@@ -50,27 +55,41 @@
          
          <div class="row images"> 
             <div class="col-md-3">
-              <img src="./assets/images/greencrystal.gif" class="img-thumbnail">
+              <img src="./assets/images/greencrystal.gif" class="img-thumbnail" id="greenCrystal">
             </div>
 
             <div class="col-md-3">
-                <img src="./assets/images/bluecrystal.gif" class="img-thumbnail">
+                <img src="./assets/images/bluecrystal.gif" class="img-thumbnail" id="blueCrystal">
             </div>
             
 
             <div class="col-md-3">
-                  <img src="./assets/images/redcrystal.gif" class="img-thumbnail">
+                  <img src="./assets/images/redcrystal.gif" class="img-thumbnail" id="redCrystal">
             </div>
 
             <div class="col-md-3">
-                    <img src="./assets/images/goldcrystal.gif" class="img-thumbnail">
+                    <img src="./assets/images/goldcrystal.gif" class="img-thumbnail" id="goldCrystal">
             </div>
       </div>
 
-      <div class="row>
+      <div class="row">
+        <div class="col-md-12">
+            <h6> YOUR SCORE:</h6>
+            <div class="scoreBoard">
+                    <h1 class="display-4" id="yourScore">? ? ?</h1>
+            </div> 
 
 
 
+        </div>
+      </div>
+
+     
+          
+
+
+      <div class="row"></div>
+        <div class="col-md-12 text-center">
 
     <button type="button" class="btn btn-warning howToPlayBtn" data-toggle="modal" data-target="#exampleModal">
         HOW TO PLAY
@@ -87,7 +106,13 @@
               </button>
             </div>
             <div class="modal-body">
-              ...
+              <p>Each game starts with a new random score to match number.</p>
+              <p>There are four crystals below assigned a random number value. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+              <p>You win the game by matching your total score to the score to match number. You lose the game if your total score goes above the random number.</p>
+              <p>The value of each crystal is hidden from you until you click on it.</p>
+              <p>Each time when the game starts, the game will change the values of each crystal.</p>
+              <br>
+              <p>Good Luck!</p>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-warning" data-dismiss="modal">Got it!</button>
@@ -96,15 +121,200 @@
           </div>
         </div>
       </div>
+      
+      </div>
+    </div>
+  
 
+  
     </div>
 
-    <!-- Optional JavaScript -->
-    
-    <script type="text/JavaScript" src="./assets/javascript/game.js"></script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script language="JavaScript" type="text/javascript" src="./assets/javascript/game.js"></script> -->
+   <script type="text/javascript">
+
+   $(document).ready (function(){
+
+    
+
+    
+
+    var scoreToMatch = randomScore()
+    var greenCrystalValue = crystalRandom()
+    var blueCrystalValue = crystalRandom()
+    var redCrystalValue = crystalRandom()
+    var goldCrystalValue = crystalRandom()
+    var totalCrystalValue = 0
+    var wins = 0
+    var losses = 0
+    
+
+    
+    
+    $("#scoreToMatch").text(scoreToMatch);
+    $("#wins").text("WINS: " + wins);
+    $("#losses").text("LOSSES: " + losses);
+
+
+
+// Function for getting random value between 19-120 for player score.
+function randomScore(min, max) {
+return Math.floor(Math.random() * (120 - 19 + 1)) + 19;
+
+
+
+
+
+}
+
+
+
+// Function for getting random value between 1-12 for crystal values.
+
+function crystalRandom(min, max) {
+return Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+}
+
+ function resetGame(){
+    scoreToMatch = randomScore();
+    greenCrystalValue = crystalRandom();
+    blueCrystalValue = crystalRandom();
+    redCrystalValue = crystalRandom();
+    goldCrystalValue = crystalRandom();
+    totalCrystalValue = 0;
+    $("#scoreToMatch").text(scoreToMatch);
+    $("#yourScore").text("? ? ?");
+
+
+
+  }
+
+function win(){
+  resetGame()
+  wins++
+  $(".youWinDiv").show();
+  $("#wins").text("WINS: " + wins);
+  $("#playAgain-Btn").click(function(){
+  $(".youWinDiv").hide();
+  
+})}
+
+function lose() {
+  resetGame();
+  losses++
+  $(".youLoseDiv").show();
+  $("#losses").text("LOSSES: " + losses);
+  $("#playAgain-Btn2").click(function(){
+  $(".youLoseDiv").hide();
+  
+  })}
+
+ 
+
+
+
+
+
+$("#greenCrystal").click(function(){
+  totalCrystalValue = totalCrystalValue + greenCrystalValue;
+  $("#yourScore").text(totalCrystalValue);
+  if (totalCrystalValue == scoreToMatch){
+      win();
+      
+      
+    
+            
+          }
+ else if ( totalCrystalValue > scoreToMatch){
+    lose();
+    }
+  
+  
+})
+
+$("#blueCrystal").click(function(){
+  totalCrystalValue = parseInt(totalCrystalValue) + parseInt(blueCrystalValue);
+  $("#yourScore").text(parseInt(totalCrystalValue));
+  if (totalCrystalValue == scoreToMatch){
+    win();
+    
+            
+          }
+ else if ( totalCrystalValue > scoreToMatch){
+    lose();
+    }
+  
+})
+
+$("#redCrystal").click(function(){
+  totalCrystalValue = parseInt(totalCrystalValue) + parseInt(redCrystalValue);
+  $("#yourScore").text(parseInt(totalCrystalValue));
+  if (totalCrystalValue == scoreToMatch){
+    win();
+    
+            
+          }
+ else if ( totalCrystalValue > scoreToMatch){
+    lose();
+    }
+
+  
+})
+
+$("#goldCrystal").click(function(){
+  totalCrystalValue = parseInt(totalCrystalValue) + parseInt(goldCrystalValue);
+  $("#yourScore").text(parseInt(totalCrystalValue));
+  if (totalCrystalValue == scoreToMatch){
+    win();
+    
+            
+          }
+ else if ( totalCrystalValue > scoreToMatch){
+    lose();
+    }
+  
+})
+
+
+
+
+
+
+
+
+
+
+console.log(greenCrystalValue);
+console.log(blueCrystalValue);
+console.log(redCrystalValue);
+console.log(goldCrystalValue);
+console.log("-------------")
+console.log(totalCrystalValue);
+
+     
+   
+  
+  
+  
+  
+  
+  })
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   </script>
+
+  
+    
   </body>
 </html>
