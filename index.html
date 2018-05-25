@@ -84,11 +84,7 @@
         </div>
       </div>
 
-      <audio autoplay="autoplay" controls="controls">  
-          <source src="./assets/audio/Crystal Castles - Crimewave (8-bit version).mp3" />  
-          <source src="music.mp3" />  
-       </audio> 
-
+     
     
      
           
@@ -142,13 +138,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- <script language="JavaScript" type="text/javascript" src="./assets/javascript/game.js"></script> -->
    <script type="text/javascript">
-
    $(document).ready (function(){
-
     
-
     
-
     var scoreToMatch = randomScore()
     var greenCrystalValue = crystalRandom()
     var blueCrystalValue = crystalRandom()
@@ -158,33 +150,19 @@
     var wins = 0
     var losses = 0
     
-
     
     
     $("#scoreToMatch").text(scoreToMatch);
     $("#wins").text("WINS: " + wins);
     $("#losses").text("LOSSES: " + losses);
-
-
-
 // Function for getting random value between 19-120 for player score.
 function randomScore(min, max) {
 return Math.floor(Math.random() * (120 - 19 + 1)) + 19;
-
-
-
-
-
 }
-
-
-
 // Function for getting random value between 1-12 for crystal values.
-
 function crystalRandom(min, max) {
 return Math.floor(Math.random() * (12 - 1 + 1)) + 1;
 }
-
  function resetGame(){
     scoreToMatch = randomScore();
     greenCrystalValue = crystalRandom();
@@ -194,11 +172,7 @@ return Math.floor(Math.random() * (12 - 1 + 1)) + 1;
     totalCrystalValue = 0;
     $("#scoreToMatch").text(scoreToMatch);
     $("#yourScore").text("? ? ?");
-
-
-
   }
-
 function win(){
   resetGame()
   wins++
@@ -208,7 +182,6 @@ function win(){
   $(".youWinDiv").hide();
   
 })}
-
 function lose() {
   resetGame();
   losses++
@@ -218,13 +191,7 @@ function lose() {
   $(".youLoseDiv").hide();
   
   })}
-
  
-
-
-
-
-
 $("#greenCrystal").click(function(){
   totalCrystalValue = totalCrystalValue + greenCrystalValue;
   $("#yourScore").text(totalCrystalValue);
@@ -241,7 +208,6 @@ $("#greenCrystal").click(function(){
   
   
 })
-
 $("#blueCrystal").click(function(){
   totalCrystalValue = parseInt(totalCrystalValue) + parseInt(blueCrystalValue);
   $("#yourScore").text(parseInt(totalCrystalValue));
@@ -255,7 +221,6 @@ $("#blueCrystal").click(function(){
     }
   
 })
-
 $("#redCrystal").click(function(){
   totalCrystalValue = parseInt(totalCrystalValue) + parseInt(redCrystalValue);
   $("#yourScore").text(parseInt(totalCrystalValue));
@@ -267,10 +232,8 @@ $("#redCrystal").click(function(){
  else if ( totalCrystalValue > scoreToMatch){
     lose();
     }
-
   
 })
-
 $("#goldCrystal").click(function(){
   totalCrystalValue = parseInt(totalCrystalValue) + parseInt(goldCrystalValue);
   $("#yourScore").text(parseInt(totalCrystalValue));
@@ -284,23 +247,12 @@ $("#goldCrystal").click(function(){
     }
   
 })
-
-
-
-
-
-
-
-
-
-
 console.log(greenCrystalValue);
 console.log(blueCrystalValue);
 console.log(redCrystalValue);
 console.log(goldCrystalValue);
 console.log("-------------")
 console.log(totalCrystalValue);
-
      
    
   
